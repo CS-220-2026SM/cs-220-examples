@@ -9,7 +9,12 @@ int main(int argc, char *argv[]){
   }
   int num = atoi(argv[1]);
   int max = atoi(argv[2]);
-  // TODO: print all multiples of 'num' up to 'max', each on a separate line
+  // print all multiples of 'num' up to 'max', each on a separate line
+  int mult = num;
+  while (mult <= max){
+    printf("%d\n",mult);
+    mult += num;
+  }
   
   return 0;
 }
