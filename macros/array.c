@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #define SIZE 10
+#define PROD(n,m) ((n)*(m))
 
 int main(){
   int ary[SIZE];
@@ -10,6 +11,7 @@ int main(){
   }
   for (int i = 0; i < SIZE; i++){
     // TODO: alter the array here
+    ary[i] = ~PROD(SIZE-1,ary[i])+1;
     printf("ary[%d] = %d\n", i, ary[i]);
   }
   return 0;
