@@ -7,18 +7,20 @@ struct coord_struct {
 };
 
 coord coord_create(int x, int y){
-  // TODO: use malloc to allocate space on the heap
+  // use malloc to allocate space on the heap
   // for the coordinate pair (x,y)
- 
-  return NULL; 
+  coord newCoord = malloc(sizeof(struct coord_struct));
+  newCoord->x = x;
+  newCoord->y = y;
+  return newCoord; 
 }
 
 int coord_getx(coord xy){
-  // TODO: return x-coordinate
-  return 0; 
+  // return x-coordinate
+  return xy->x; 
 }
 
 int coord_gety(coord xy){
-  // TODO: return y-coordinate
-  return 0; 
+  // return y-coordinate
+  return xy->y; 
 }
