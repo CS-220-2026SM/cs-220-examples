@@ -8,6 +8,12 @@ int main(){
      space
   */
   char str[] = "These are tokens separated by spaces.";
-  
+  char *token = strtok(str," ");
+  int i = 0;
+  while (token != NULL){
+    printf("token %d: %s\n", i, token);
+    token = strtok(NULL," .");
+    i++;
+  }
   return 0;
 }
